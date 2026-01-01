@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>watch.it</title>
+    <link rel="stylesheet" href="Assess1Task2SS.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=BBH+Sans+Bogle&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Pixelify+Sans:wght@400..700&family=Protest+Guerrilla&family=Teko:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=BBH+Sans+Bogle&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Pixelify+Sans:wght@400..700&family=Protest+Guerrilla&family=Teko:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!--There will be errors, this does not 100% mirror the given wireframes due to my lack of knowledge-->
+    <!--These errors will be called here in the html, more details will be in CSS-->
+    <header>
+        <h1 class="teko-Headings">watch.it</h1>
+        <!--I have encountered a problem regarding font size and its corresponding standard spacing-->
+        <!--Please see CSS file for more details-->
+        <nav style="align-self:center;display:flex;flex-direction:row;">
+        <!--there is an alignment problem when switching from desktop to tablet media queries-->
+            <a href="#" class="lato-regular">Action</a>
+            <a href="#"class="lato-regular">Comedy</a>
+            <a href="#"class="lato-regular">Romance</a>
+            <a href="#"class="lato-regular">Drama</a>
+        </nav>
+        <!--The mentioned error above involves this button-->
+        <button class="teko-Headings" style="width:25%;height:90%;align-self:center;">Search</button>
+    </header>
+    <main class="container">
+        <article class="movie-container-flex"><!--this div carries everything and has most of the general css tags-->
+            <div class="tablet-column"><!--this div is used specifically for the tablet display -->
+                <div class="movie-container-top">
+                    <img src="who-framed-roger-rabbit.jpg">
+                    <div class="info-flex">
+                        <p class="lato-regular"><span class="teko-Headings">Who Framed Roger Rabbit? (1998)</span><br><br>
+                        In a world where cartoons and humans coexist, a detective
+                        must solve a zany, high-stakes mystery. Packed with wild humor,
+                        groundbreaking animation, and noir twists, this unique film 
+                        will pull you into a world where anything is possible!</p>
+                        <button class="lato-regular">Watch Now</button>
+                    </div>
+                </div><br>
+                    <div id="desktop-middle-movies"><!--the desktop middle movies are smaller, this div is for them-->
+                        <div class="movie-container-middle"><!--again, its called middle due to the desktop view-->
+                            <img src="hook.jpg">
+                            <div class="info-flex">
+                                <p class="lato-regular"><span class="teko-Headings">Hook (1991)</span><br><br>
+                                Rediscover Neverland in this thrilling twist on Peter Pan! Robin Williams 
+                                stars as a grown-up Peter, who must rediscover his inner child to rescue 
+                                his kids from the clutches of Captain Hook. Adventure, magic, and nostalgia
+                                blend in this timeless family classic.
+                                </p>
+                                <button class="lato-regular">Watch Now</button>
+                            </div>
+                        </div><br>
+                        <div class="movie-container-middle">
+                            <img src="la-la-land.jpg">
+                            <div class="info-flex">
+                                <p class="lato-regular"><span class="teko-Headings">La La Land (2016)</span><br><br>
+                                Love, dreams, and the magic of LA take center stage in this musical 
+                                masterpiece. Watch as two starry-eyed artists navigate passion and 
+                                ambition in a world where every moment feels like a cinematic spectacle!
+                                </p>
+                                <button class="lato-regular">Watch Now</button>
+                            </div>
+                        </div><br>
+                    </div>
+            </div>
+            <div class="tablet-column" id="mobile-column"><!--this ID aligns the column with the top column-->
+                <!--the div below are for the movies that are the same size as top in desktop, but different content alignment-->
+                <div class="movie-container-bottom">
+                    <img src="hidden-figures.jpg" id="hidden-figures">
+                    <div class="info-flex">
+                        <p class="lato-regular"><span class="teko-Headings">Hidden Figures (2016)</span><br><br>
+                        Three unsung heroes of NASA's space race take the spotlight in this inspiring true story. 
+                        Battling discrimination and defying the odds, these brilliant African-American women prove 
+                        that intelligence, perseverance, and unity can change history and break barriers.
+                        </p>
+                        <button class="lato-regular">Watch Now</button>
+                    </div>
+                </div><br>
+                <div class="movie-container-bottom" id="palm-springs">
+                    <img src="palm-springs.jpg">
+                    <div class="info-flex">
+                        <p class="lato-regular"><span class="teko-Headings">Palm Springs (2020)</span><br><br>
+                        A never-ending wedding day turns into an unforgettable time-loop romance! 
+                        Stuck in the same day, two strangers find love, chaos, and meaning in the 
+                        most unexpected ways.
+                        </p>
+                        <button class="lato-regular">Watch Now</button>
+                    </div>
+                </div><br>
+                <div class="movie-container-bottom" id="barbie">
+                    <img src="barbie.jpg">
+                    <div class="info-flex">
+                        <p class="lato-regular"><span class="teko-Headings">Barbie (2023)</span><br><br>
+                        Step into the dazzling world of Barbie as she embarks on an unexpected journey 
+                        from her perfect doll life to the real world. Filled with humor, heart, and 
+                        empowering messages, this vibrant adventure redefines what it means to dream big!
+                        </p>
+                        <button>Watch Now</button>
+                    </div>
+                </div>
+        </div>
+        </article>
+    </main>
+</body>
+</html>

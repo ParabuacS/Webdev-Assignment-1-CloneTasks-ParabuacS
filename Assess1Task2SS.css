@@ -1,0 +1,374 @@
+/***
+There will be comment lines throughout the code
+Specific syntax will be called out as <syntax> in the comment lines
+These syntax will include class names (container, movie-container, etc)
+Specific parameters will be referred numerically (10)
+While normal numbers will be referred alphabetically (ten)
+***/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.teko-Headings {/*heading font from google fonts*/
+  font-family: "Teko", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.lato-regular {/*normal text font from google fonts*/
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+/***
+Colors allowed: #070410, #231651, #4DCCBD, #EEF36A, #FFFFFF
+spacing for <main> <container> and <header> <nav> options is large
+spacing for <movie-container>, <header>, and <button> is small
+small spacing on all screen sizes is 16px
+large spacing for mobile tablet and desktop are 16px, 32px, and 48px respectively
+***/
+header {
+    display:flex;
+    flex-direction:row;
+    width:auto;
+    height:3.5em;
+    background-color:#EEF36A;
+    color:#070410;
+    align-content:center;
+    justify-content:space-between;
+}
+header h1{
+    margin:16px;
+    padding:16px;
+    gap:16px;
+}
+header nav{
+    align-self:center;
+    display:flex;
+    flex-direction:row;
+}
+/***
+Due to conflicting parameters of <font-size> and spacing requirements,
+I have made the design decision of ignoring those specifications for the <nav> options.
+The space between each <nav> option is too wide, and the <font-size> of 3em/2em are too big.
+Should these parameters be followed, the search bar will disappear from view.
+Therefore, this current code is the best option to accurately mimic the given wireframes.
+THIS ONLY APPLIES TO THE <nav> OPTIONS, THANK YOU
+***/
+header nav a{
+    text-decoration:none;
+    color:#070410;
+    text-align:center;
+    margin:16px;
+    padding:16px;
+    gap:16px;
+    font-size:0.5em;
+}
+button{
+    margin:16px;
+    padding:16px;
+    gap:16px;
+    border-radius:16px;
+    font-size:2em;
+}
+body{
+    background-color:#231651;
+    color:#FFFFFF;
+}
+.container {/*container for <main> tag in html*/
+  max-width: 900px;
+  background-color:#FFFFFF;
+  margin:2rem auto;
+  padding:2rem;
+  gap:2rem;
+  justify-content:center;
+}
+article{
+  font-size:1.5em;
+}
+/*this is used to align all the movie boxes together*/
+.movie-container-flex{
+  display:flex;
+  width:900px;
+  margin:16px;
+  padding:16px;
+  gap:16px;
+}
+/*the following few classes are for content in each movie box*/
+.movie-container-top{
+    background-color:#4DCCBD;
+    max-width:800px;
+    height:auto;
+    align-content:center;
+}
+.movie-container-bottom{
+    background-color:#4DCCBD;
+    max-width:800px;
+    height:auto;
+    align-content:center;
+}
+.movie-container-middle{
+    background-color:#4DCCBD;
+    width:392px;
+    height:auto;
+}
+/*I used <span> inside <p> tags for movie headings, this is for them*/
+span {
+  font-size:2.5rem;
+}
+.info-flex{
+  margin:16px auto;
+  padding:16px;
+  gap:16px;
+}
+
+/*media query for mobile*/
+@media (max-width:719px) {
+  header{
+    font-size:2em;
+    width:auto;
+    height:3em;
+    align-content:center;
+    justify-content:space-between;
+    h1{
+      font-size: 2em;
+      align-self:center;
+    }
+    button{
+      font-size:1.5em;
+    }
+    /*the nav options disappear as per the wireframe*/
+    nav a{
+      display:none;
+      margin:0;
+      padding:0;
+      gap:0;
+    }
+  }
+  .movie-container-flex{
+    /*this will change for every media query*/
+    width:400px;
+    justify-content:center;
+    flex-direction:column;
+    margin:16px auto;
+    padding:16px auto;
+    gap:16px;
+    /*getting rid of the tablet double column*/
+    .tablet-column{
+      margin:0;
+      padding:0;
+      gap:0;
+    }
+  }
+  .movie-container-top{
+    width:392px;
+    .info-flex{
+      display:flex;
+      flex-direction:column;
+      width:392px;
+      height:auto;
+    }
+    p{
+      font-size:1.5rem;
+    }
+    img{
+      width:392px;
+      height:auto;
+    }
+  }
+  .movie-container-middle{
+    img{
+      width:392px;
+      height:auto;
+    }
+    .info-flex{
+      display:flex;
+      flex-direction:column;
+      width:392px;
+      height:auto;
+    }
+  }
+  .movie-container-bottom{
+    width:392px;
+    img{
+      width:392px;
+      height:auto;
+    }
+    .info-flex{
+      display:flex;
+      flex-direction:column;
+      width:392px;
+      height:auto;
+    }
+  }
+}
+
+@media (min-width:720px) and (max-width:1023px) {
+  header {
+    width:auto;
+    height:3em;
+    align-content:center;
+    justify-content:space-between;
+    font-size:2em;
+    nav a{
+      font-size:0.5em;
+    }
+    h1{
+      margin:16px;
+      padding:0;
+      gap:16px;
+    }
+    button{
+      margin:16px;
+      padding:0;
+      gap:16px;
+    }
+  }
+  
+  .movie-container-flex{
+    display:flex;
+    width:900px;
+    height:auto;
+    margin:32px auto;
+    padding:32px auto;
+    gap:32px;
+    .tablet-column{
+      padding:0;
+      gap:16px;
+    }
+  }
+
+  .movie-container-top{
+    max-width:392px;
+    height:auto;
+    .info-flex{
+      display:flex;
+      flex-direction:column;
+      width:392px;
+      height:auto;
+    }
+    p{
+      font-size:1.5rem;
+    }
+    img{
+      width:392px;
+      height:auto;
+      align-self:center;
+    }
+  }
+  .movie-container-middle{
+    img{
+      width:392px;
+      height:auto;
+    }
+    .info-flex{
+      display:flex;
+      flex-direction:column;
+      width:392px;
+      height:auto;
+    }
+  }
+  .movie-container-bottom{
+    display:flex;
+    flex-direction:column;
+    margin:auto;
+    max-width:392px;
+    img{
+      width:392px;
+      height:auto;
+    }
+    .info-flex{
+      display:flex;
+      flex-direction:column;
+      width:392px;
+      height:auto;
+    }
+  }
+  /*admittedly, I'm too inexperienced to think of a different way to fix the heights*/
+  #hidden-figures{
+    height:426px;
+  }
+  #palm-springs{
+    height:932px;
+  }
+  /*there is a misalignment between la-la-land and barbie, I'm too inexperienced to find a solution*/
+}
+@media (min-width:1024px) {
+  header{
+    font-size:3em;
+  }
+  .movie-container-flex{
+    flex-direction:column;
+    max-width:900px;
+    margin:48px auto;
+    padding:48px auto;
+    gap:48px;
+    /*again, I lack knowledge, this was the only way I thought of to affix la-la-land to the right*/
+    #desktop-middle-movies{
+      display:flex;
+      flex-direction:row;
+      gap:10px;
+    }
+  }
+  .movie-container-top{
+    .info-flex{
+      display:flex;
+      flex-direction:row;
+      width:800px;
+      height:auto;
+      gap:48px;
+    }
+    p{
+      font-size:1.5rem;
+    }
+    img{
+      width:800px;
+      height:auto;
+      align-self:center;
+    }
+  }
+  .movie-container-middle{
+    height:950px;
+    gap:48px;
+    img{
+      width:392px;
+      height:auto;
+    }
+    p{
+      font-size:1.5rem;
+    }
+    .info-flex{
+      display:flex;
+      flex-direction:column;
+      width:392px;
+      height:auto;
+    }
+  }
+  .movie-container-bottom{
+    display:flex;
+    flex-direction:row;
+    img{
+      width:400px;
+      height:auto;
+    }
+    p{
+      font-size:1.5rem;
+    }
+    .info-flex{
+      display:flex;
+      flex-direction:column;
+      width:400px;
+      height:auto;
+    }
+  }
+}
+/***
+Small reflection, yes, I know the code could be considered a mess,
+but this is how efficient I can make it with my current knowledge. 
+I will happily take point deductions due to the over 350 lines of CSS.
+My only excuse for not being able to properly fix it is time constraints,
+which doesn't sound convincing but its true. Anyway, excuses don't matter,
+this is the output I could come up with within the deadline without breaking 
+the code too much.
+***/
